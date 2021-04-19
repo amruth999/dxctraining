@@ -56,7 +56,7 @@ class emp{
 		return salary;
 	}
 	
-	
+	@Override
 	public String toString() {
 		String ans = String.format("%-15s %-30s %-30s %-10s %-10s\n", this.name, this.department, this.dateOfJoining, this.age, this.salary);
 		return ans;
@@ -65,7 +65,7 @@ class emp{
 }
 class salaryComparator implements Comparator<emp>{
 	public int compare(emp o1, emp o2) {
-		
+		// TODO Auto-generated method stub
 		if(o1.getSalary() != o2.getSalary()) {
 			return o1.getSalary() - o2.getSalary();
 		}
@@ -75,7 +75,7 @@ class salaryComparator implements Comparator<emp>{
 class AgeComparator implements Comparator<emp>{
 
 	public int compare(emp o1, emp o2) {
-		
+		// TODO Auto-generated method stub
 		if(o1.getAge() != o2.getAge()) {
 			return o1.getAge() + o2.getAge();
 		}
@@ -91,19 +91,31 @@ public class Main
 	{
 		Scanner in = new Scanner(System.in);
 		ArrayList<emp> employees = new ArrayList<emp>();
+//		System.out.println("Enter number of employees!");
+//		int n = in.nextInt();
+//		while(n-- > 0) {
+//			SimpleDateFormat obj = new SimpleDateFormat("dd-mm-yyyy");
+//			String name = in.nextLine();
+//			String dept = in.nextLine();
+//			Date doj = obj.parse(in.nextLine());
+//			int age = in.nextInt();
+//			int sal = in.nextInt();
+//			employees.add(new emp(name, dept, doj, age, sal));
+//		}
 		SimpleDateFormat obj = new SimpleDateFormat("dd-mm-yyyy");
 		employees.add(new emp("Rohini", "DataAnalysis", obj.parse("10-10-2000"), 45, 90000));
 		employees.add(new emp("Ranganathan", "Production", obj.parse("09-10-2000"), 45, 92000));
 		employees.add(new emp("Pankaj", "Marketing", obj.parse("02-02-2002"), 38, 75000));
+		
 		System.out.println("1.Sort employees by salary");
-		System.out.println("2.Sort employees by age and by date of\r\n" + 
-				"joining");
+		System.out.println("2.Sort employees by age and by date of\r\n" + "joining");
 		System.out.println("Enter Your Choice");
 		int choice = in.nextInt();
 		switch(choice)
 		{
 			case 1: {
 						Collections.sort(employees, new salaryComparator());
+						System.out.println(String.format("%-15s %-30s %-30s %-10s %-10s\n", "Employee Name", "Department", "DOJ", "Age", "Salary"));
 						for (int i = 0; i < employees.size(); i++)
 						{
 							System.out.println(employees.get(i));
@@ -113,6 +125,7 @@ public class Main
 					}
 			case 2: {
 						Collections.sort(employees, new AgeComparator());
+						System.out.println(String.format("%-15s %-30s %-30s %-10s %-10s\n", "Employee Name", "Department", "DOJ", "Age", "Salary"));
 						for (int i = 0; i < employees.size(); i++)
 						{
 							System.out.println(employees.get(i));
