@@ -91,17 +91,7 @@ public class Main
 	{
 		Scanner in = new Scanner(System.in);
 		ArrayList<emp> employees = new ArrayList<emp>();
-//		System.out.println("Enter number of employees!");
-//		int n = in.nextInt();
-//		while(n-- > 0) {
-//			SimpleDateFormat obj = new SimpleDateFormat("dd-mm-yyyy");
-//			String name = in.nextLine();
-//			String dept = in.nextLine();
-//			Date doj = obj.parse(in.nextLine());
-//			int age = in.nextInt();
-//			int sal = in.nextInt();
-//			employees.add(new emp(name, dept, doj, age, sal));
-//		}
+
 		SimpleDateFormat obj = new SimpleDateFormat("dd-mm-yyyy");
 		employees.add(new emp("Rohini", "DataAnalysis", obj.parse("10-10-2000"), 45, 90000));
 		employees.add(new emp("Ranganathan", "Production", obj.parse("09-10-2000"), 45, 92000));
