@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+function compare(arr)
+{
+  arr.sort(function(x,y)
+           {
+           return x-y;
+           });
+  var a = [arr[0]];
+  var x = [];
+  
+  for(var j=1; j < arr.length; j++)
+  {
+    if(arr[j-1] !== arr[j])
+    {
+      a.push(arr[j]);
+    }
+  }
+    x.push(a[1],a[a.length-2]);
+  return x.join(',');
+  }
+
+document.write(compare([4,44,444,2,22]));
+</script>
+</body>
+</html>
