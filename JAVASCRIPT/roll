@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+
+var student =  { 
+		  name : "AMRUTH", 
+		  sclass : "10", 
+		  rollno : 12345  };
+document.writeln(student.name);
+document.write("<br>");
+document.writeln(student.sclass);
+document.writeln("<br>");
+document.writeln(student.rollno);
+document.writeln("<br>");
+document.writeln("<br>");
+document.writeln("after deletion");
+document.writeln("<br>");
+document.writeln("<br>");
+		delete student.rollno;
+		document.writeln(student.name);
+		document.write("<br>");
+		document.writeln(student.sclass);
+		document.writeln("<br>");
+		document.writeln(student.rollno);
+		</script>
+
+</body>
+</html>
