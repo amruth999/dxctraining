@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+trunc = function(string, ln, end) {
+    if (ln == null) {
+      ln = 500;
+    }
+    if (end == null) {
+      end = '...';
+    }
+    if (string.length > ln) {
+      return string.substring(0, ln - end.length) + end;
+    } else {
+      return string;
+    }
+  };
+  document.writeln(trunc('We are doing JS string exercises.'));
+  document.write("<br>");
+  
+document.write(trunc('We are doing JS string exercises.',19));
+document.write("<br>");
+document.write(trunc('We are doing JS string exercises.',15,'!!'));
+document.write("<br>");
+document.write(trunc('DXC Training',10,'#'));
+document.write("<br>");
+</script>
+</body>
+</html>
