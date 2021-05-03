@@ -1,13 +1,13 @@
 package com.org.hello;
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class MainApp {
-	
-	public static void main(String[] args) {
-		ApplicationContext objA = new ClassPathXmlApplicationContext("bean.xml");
-		Patient p = (Patient)objA.getBean("patient");
-		p.show();
-	}
+public class Main{
+   public static void main(String[] args) {
+      ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("Bean.xml");
 
+      Patient p = (Patient) context.getBean("patient");
+      p.calculate();
+      context.close();
+   }
 }
