@@ -1,4 +1,4 @@
-package com;
+package com.org.hello;
 
 public class BMICalculator {
 private Patient patient;
