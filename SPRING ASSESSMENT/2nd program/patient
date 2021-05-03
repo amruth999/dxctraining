@@ -1,22 +1,37 @@
 package com.org.hello;
 
 public class Patient {
-private int patientId;
-private double patientWeight;
+private int patientid;
+private String patientName;
 private double patientHeight;
-private String name;
-BMICalculator b;
-public int getPatientId() {
-	return patientId;
+private double patientWeight;
+private BMICalculator bmicalculator;
+public Patient() {}
+public BMICalculator getBmicalculator() {
+	return bmicalculator;
 }
-public void setPatientId(int patientId) {
-	this.patientId = patientId;
+public void setBmicalculator(BMICalculator bmicalculator) {
+	//System.out.println("inside bmicalc");
+	this.bmicalculator = bmicalculator;
 }
-public double getPatientWeight() {
-	return patientWeight;
-}
-public void setPatientWeight(double patientWeight) {
+public Patient(int patientid, String patientName, double patientHeight, double patientWeight) {
+	super();
+	this.patientid = patientid;
+	this.patientName = patientName;
+	this.patientHeight = patientHeight;
 	this.patientWeight = patientWeight;
+}
+public int getPatientid() {
+	return patientid;
+}
+public void setPatientid(int patientid) {
+	this.patientid = patientid;
+}
+public String getPatientName() {
+	return patientName;
+}
+public void setPatientName(String patientName) {
+	this.patientName = patientName;
 }
 public double getPatientHeight() {
 	return patientHeight;
@@ -24,13 +39,14 @@ public double getPatientHeight() {
 public void setPatientHeight(double patientHeight) {
 	this.patientHeight = patientHeight;
 }
-public String getName() {
-	return name;
+public double getPatientWeight() {
+	return patientWeight;
 }
-public void setName(String name) {
-	this.name = name;
+public void setPatientWeight(double patientWeight) {
+	this.patientWeight = patientWeight;
 }
-public void show() {
-	System.out.println(b.BMI());;
+public void calculate() {
+	bmicalculator.calculateBMI(patientWeight,  patientHeight);
 }
+
 }
