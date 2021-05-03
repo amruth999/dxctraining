@@ -15,7 +15,7 @@
 <bean id="D" class="com.org.emp.DXC">  
 
 <constructor-arg value="2" type="int"></constructor-arg> 
-<constructor-arg value="amruthreddy" type="String"></constructor-arg> 
+<constructor-arg value="amr" type="String"></constructor-arg> 
 <constructor-arg value="kallyamamruth67@gmail.com" type="String"></constructor-arg>  
 <constructor-arg value="6303605782" type="Long"></constructor-arg> 
  
